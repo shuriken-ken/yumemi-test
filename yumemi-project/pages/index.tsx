@@ -23,11 +23,11 @@ export default function Home({ prefectures, populations }: Props) {
         populationdata={[
           {
             prefName: "hokkaido",
-            data: [{ year: 2020, value: 500000 }],
+            data: populations.result.data[0].data,
           },
           {
             prefName: "aomori",
-            data: [{ year: 2020, value: 20000 }],
+            data: populations.result.data[1].data,
           },
         ]}
       />
@@ -41,7 +41,6 @@ export const getStaticProps = async () => {
     prefCode: "1",
     cityCode: "-",
   })
-  console.log(populations)
   return {
     props: {
       prefectures,
