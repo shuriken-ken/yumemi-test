@@ -6,7 +6,7 @@ import {
 } from "../lib/prefecture"
 import { InferGetStaticPropsType } from "next"
 
-import Graph from "./graph"
+import Graph from "./Graph"
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
