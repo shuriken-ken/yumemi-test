@@ -7,6 +7,7 @@ import {
 import { InferGetStaticPropsType } from "next"
 
 import Graph from "./Graph"
+import CheckField from "./CheckField"
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
@@ -18,6 +19,10 @@ export default function Home({ prefectures, populations }: Props) {
           <div key={result.prefCode}>{result.prefName}</div>
         ))}
       </div>
+      <CheckField
+        prefectures={prefectures.result}
+        onChange={clickCheckField}
+      ></CheckField>
       <div>{String(populations.result.data[0].data[8].value)}</div>
       <Graph
         populationdata={[
@@ -47,4 +52,8 @@ export const getStaticProps = async () => {
       populations,
     },
   }
+}
+
+function clickCheckField(): void {
+  return
 }
