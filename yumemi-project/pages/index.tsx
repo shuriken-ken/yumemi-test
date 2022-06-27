@@ -49,6 +49,18 @@ export const getStaticProps = async () => {
   }
 }
 
-function clickCheckField(): void {
+async function clickCheckField(
+  prefName: string,
+  prefCode: number,
+  checked: boolean
+): Promise<void> {
+  if (checked) {
+    const populations: Populations = await fetchPopulation({
+      prefCode: String(1),
+      cityCode: "-",
+    })
+    console.log(populations)
+  }
+
   return
 }
