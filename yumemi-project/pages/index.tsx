@@ -14,11 +14,6 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 export default function Home({ prefectures, populations }: Props) {
   return (
     <div>
-      <div>
-        {prefectures.result.map((result: any) => (
-          <div key={result.prefCode}>{result.prefName}</div>
-        ))}
-      </div>
       <CheckField
         prefectures={prefectures.result}
         onChange={clickCheckField}
