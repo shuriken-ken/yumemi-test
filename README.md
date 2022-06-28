@@ -5,4 +5,5 @@
 
 ## 参考
 
-    -  https://zenn.dev/shimapon3/articles/13e3d4b147742c
+    - https://zenn.dev/shimapon3/articles/13e3d4b147742c
+    - https://opendata.resas-portal.go.jp/docs/api/v1/prefectures.html
