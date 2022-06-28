@@ -7,8 +7,8 @@ import {
 } from "../lib/prefecture"
 import { InferGetStaticPropsType } from "next"
 
-import Graph from "./Graph"
-import CheckField from "./CheckField"
+import Graph from "../components/Graph"
+import CheckField from "../components/CheckField"
 import { useState } from "react"
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
