@@ -10,32 +10,18 @@ type Props = {
   onChange: (name: string, prefName: number, check: boolean) => void
 }
 
-const Styles: { [key: string]: React.CSSProperties } = {
-  checkcardList: {
-    display: "flex",
-    flexWrap: "wrap",
-    padding: "10px",
-    justifyContent: "flex-start",
-    justifySelf: "auto",
-  },
-  text: { display: "contents", marginLeft: "1em", cursor: "pointer" },
-  checkcard: {
-    borderRadius: "24px",
-    border: "solid 2px",
-    textAlign: "center",
-    padding: "4px",
-    margin: "0.5rem",
-  },
-}
-
 // 都道府県一覧のチェックボックスを表示するコンポーネント
 const CheckField = ({ prefectures, onChange }: Props) => {
   return (
     <>
-      <div style={Styles.checkcardList}>
+      <div className="flex flex-wrap p-10 justify-start justify-self-auto">
         {prefectures.map((prefecture) => (
-          <div style={Styles.checkcard} key={prefecture.prefName}>
+          <div
+            className="w-36 rounded-3xl border-solid border-2 text-center p-1 m-2"
+            key={prefecture.prefName}
+          >
             <input
+              className="mr-3"
               type="checkbox"
               name="Prefecture name"
               onChange={(event) =>
@@ -48,7 +34,7 @@ const CheckField = ({ prefectures, onChange }: Props) => {
               id={"checkbox" + prefecture.prefCode}
             />
             <label
-              style={Styles.text}
+              className="contents cursor-pointer"
               htmlFor={"checkbox" + prefecture.prefCode}
             >
               {prefecture.prefName.length === 3
