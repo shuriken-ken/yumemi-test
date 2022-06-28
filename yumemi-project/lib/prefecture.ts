@@ -21,6 +21,11 @@ export interface Populations {
   }
 }
 
+export interface PrefPopulation {
+  prefName: string
+  data: { year: number; value: number }[]
+}
+
 export const fetchPrefectures = async () => {
   const url = "https://opendata.resas-portal.go.jp/api/v1/prefectures"
   const API_KEY = String(process.env.NEXT_PUBLIC_RESAS_API_KEY)
