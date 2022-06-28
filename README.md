@@ -1,7 +1,12 @@
 # yumemi-test
 
 - https://notion.yumemi.co.jp/0e9ef27b55704d7882aab55cc86c999d
-- 上記をベースに、試したかったため Next.js/Tailwind CSS を採用
+- 上記をベースに、勉強したかったため Next.js/Tailwind CSS を採用
+
+# 起動
+
+- `cd ./yumemi-project`
+- `npm run dev`
 
 ## 参考
 
