@@ -23,7 +23,7 @@ export interface Populations {
 
 export const fetchPrefectures = async () => {
   const url = "https://opendata.resas-portal.go.jp/api/v1/prefectures"
-  const API_KEY = String(process.env.RESAS_API_KEY)
+  const API_KEY = String(process.env.NEXT_PUBLIC_RESAS_API_KEY)
   const res = await fetch(url, {
     headers: { "X-API-KEY": API_KEY },
   })
@@ -34,7 +34,7 @@ export const fetchPrefectures = async () => {
 
 export const fetchPopulation = async (params: FetchPopulationParams) => {
   const url = `https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?cityCode=${params.cityCode}&prefCode=${params.prefCode}`
-  const API_KEY = String(process.env.RESAS_API_KEY)
+  const API_KEY = String(process.env.NEXT_PUBLIC_RESAS_API_KEY)
   const res = await fetch(url, {
     headers: { "X-API-KEY": API_KEY },
   })
