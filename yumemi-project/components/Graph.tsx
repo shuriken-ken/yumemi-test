@@ -2,12 +2,6 @@ import React from "react"
 import Highcharts from "highcharts"
 import HighchartsReact from "highcharts-react-official"
 
-const Styles: { [key: string]: React.CSSProperties } = {
-  graph: {
-    padding: "12px",
-  },
-}
-
 type Props = {
   populationdata: {
     prefName: string
@@ -58,7 +52,7 @@ const Graph = ({ populationdata }: Props) => {
   }
 
   return (
-    <div style={Styles.graph}>
+    <div className="p-12">
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   )
