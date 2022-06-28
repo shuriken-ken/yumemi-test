@@ -16,7 +16,7 @@ type Props = {
 }
 
 // 選んだ都道府県の人口推移グラフを表示するコンポーネント
-const Graph: React.FC<Props> = ({ populationdata }) => {
+const Graph = ({ populationdata }: Props) => {
   let series: Highcharts.SeriesOptionsType[] = []
   let categories = []
 

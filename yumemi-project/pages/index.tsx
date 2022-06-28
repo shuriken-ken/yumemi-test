@@ -13,7 +13,7 @@ import { useState } from "react"
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export default function Home({ prefectures }: Props) {
+const Home = ({ prefectures }: Props) => {
   const [prefPopulations, setPrefPopulations] = useState<PrefPopulation[]>([])
   async function clickCheckField(
     prefName: string,
@@ -51,6 +51,8 @@ export default function Home({ prefectures }: Props) {
     </div>
   )
 }
+
+export default Home
 
 export const getStaticProps = async () => {
   const prefectures: Prefectures = await fetchPrefectures()
