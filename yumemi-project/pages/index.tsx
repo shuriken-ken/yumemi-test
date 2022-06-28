@@ -43,10 +43,15 @@ const Home = ({ prefectures }: Props) => {
 
   return (
     <div>
+      <div className="text-4xl text-gray-800 mb-8 ml-4">
+        都道府県別の総人口推移グラフ
+      </div>
+      <div className="text-3xl text-gray-800 ml-6">都道府県</div>
       <CheckField
         prefectures={prefectures.result}
         onChange={clickCheckField}
       ></CheckField>
+      <div className="text-3xl text-gray-800 ml-6">人口数</div>
       <Graph populationdata={prefPopulations} />
     </div>
   )
